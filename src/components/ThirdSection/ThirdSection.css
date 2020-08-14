@@ -1,0 +1,17 @@
+.thirdSection-r {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0px;
+}
+
+.thirdSection-r img {
+    max-height: 95px;
+    padding: 0px 3px;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+    .thirdSection-r img {
+        max-height: 65px;
+    }
+}

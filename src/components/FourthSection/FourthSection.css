@@ -1,0 +1,26 @@
+.fourthSection-r {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 7px 7px;
+}
+
+.fourthSection-r img {
+    max-height: 105px;
+    padding: 0px 3px;
+}
+
+@media screen and (max-width: 991px) {
+    .fourthSection-r {
+        justify-content: space-between;
+    }
+
+    .fourthSection-r img {
+        max-height: 90px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .fourthSection-r {
+        justify-content: space-evenly;
+    }
+}

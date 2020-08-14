@@ -1,0 +1,24 @@
+#secondSection-r {
+    display: flex;
+    justify-content: space-between;
+}
+
+#secondSection-r img {
+    max-height: 350px;
+}
+
+@media screen and (max-width: 444px) {
+
+    #secondSection-r img {
+        max-height: 280px;
+    }
+
+}
+
+@media screen and (max-width: 365px) {
+
+    #secondSection-r img {
+        max-height: 230px;
+    }
+
+}

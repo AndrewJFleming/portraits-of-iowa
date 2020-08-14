@@ -1,0 +1,12 @@
+#contactForm {
+    margin-bottom: 20px;
+    padding: 3px;
+    background-color: #7fbd8c;
+}
+
+#contactForm div {
+    display: block;
+    justify-content: space-evenly;
+    padding: 2px;
+    text-align: center;
+}
