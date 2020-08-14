@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/portraits-of-iowa/static/css/main.6770d013.chunk.css",
+    "main.js": "/portraits-of-iowa/static/js/main.5aac0a2c.chunk.js",
+    "main.js.map": "/portraits-of-iowa/static/js/main.5aac0a2c.chunk.js.map",
+    "runtime-main.js": "/portraits-of-iowa/static/js/runtime-main.b43a8a41.js",
+    "runtime-main.js.map": "/portraits-of-iowa/static/js/runtime-main.b43a8a41.js.map",
+    "static/css/2.11829350.chunk.css": "/portraits-of-iowa/static/css/2.11829350.chunk.css",
+    "static/js/2.33acf01d.chunk.js": "/portraits-of-iowa/static/js/2.33acf01d.chunk.js",
+    "static/js/2.33acf01d.chunk.js.map": "/portraits-of-iowa/static/js/2.33acf01d.chunk.js.map",
+    "index.html": "/portraits-of-iowa/index.html",
+    "precache-manifest.44c2b2006b6bc3f46e36e8cb12d1358c.js": "/portraits-of-iowa/precache-manifest.44c2b2006b6bc3f46e36e8cb12d1358c.js",
+    "service-worker.js": "/portraits-of-iowa/service-worker.js",
+    "static/css/2.11829350.chunk.css.map": "/portraits-of-iowa/static/css/2.11829350.chunk.css.map",
+    "static/css/main.6770d013.chunk.css.map": "/portraits-of-iowa/static/css/main.6770d013.chunk.css.map",
+    "static/js/2.33acf01d.chunk.js.LICENSE.txt": "/portraits-of-iowa/static/js/2.33acf01d.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b43a8a41.js",
+    "static/css/2.11829350.chunk.css",
+    "static/js/2.33acf01d.chunk.js",
+    "static/css/main.6770d013.chunk.css",
+    "static/js/main.5aac0a2c.chunk.js"
+  ]
+}
