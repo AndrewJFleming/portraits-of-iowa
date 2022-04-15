@@ -1,0 +1,15 @@
+.auth-message-wrapper {
+  padding: 20px 20px 10px 20px;
+}
+.auth-message a {
+  color: rgb(50, 97, 185);
+  font-weight: 800;
+}
+.auth-message a:hover {
+  color: rgb(35, 81, 165);
+}
+
+.passed-deadline-message {
+  color: red;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,160 @@
+header {
+  position: fixed;
+  border-top: 1px solid magenta;
+  border-bottom: 1px solid magenta;
+  background-color: rgba(48, 48, 48, 0.9);
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  font-family: "Marcellus", serif;
+  font-size: 1.2em;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header-content ul {
+  padding: 0;
+  margin: 0;
+}
+
+.header-content li {
+  float: left;
+  list-style: none;
+}
+
+.header-content-left {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+.links-list .linkItem {
+  padding: 10px 0 10px 20px;
+  display: block;
+}
+.links-list .linkItem:first-of-type {
+  padding: 10px 0 10px 0px;
+  display: block;
+}
+header a:active,
+header a:hover {
+  color: rgb(134, 177, 255);
+}
+
+#branding {
+  text-transform: uppercase;
+  padding: 10px 0;
+  margin: 0;
+  display: block;
+}
+
+#branding a:active {
+  color: rgb(134, 177, 255);
+}
+
+.links-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons-wrapper a {
+  padding: 0;
+  margin: 11px 0 10px 20px;
+}
+.buttons-wrapper #logout-button {
+  margin-left: 20px;
+}
+.buttons-wrapper button {
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  background-color: #eee;
+  color: rgb(24, 24, 24);
+  border: 1px solid #000;
+  font-weight: 600;
+}
+.buttons-wrapper button:hover {
+  color: #000;
+  background-color: #fff;
+}
+.buttons-wrapper button:focus {
+  outline: none;
+  background-color: rgb(177, 204, 255);
+}
+
+@media screen and (max-width: 1199px) {
+  ul .hideText {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  ul {
+    height: 100%;
+  }
+
+  ul .hideText {
+    display: none;
+  }
+
+  ul li {
+    font-size: 0.8em;
+  }
+  .buttons-wrapper button {
+    font-size: 12px;
+  }
+
+  .header-content-left {
+    flex-wrap: wrap;
+  }
+  .buttons-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  #branding {
+    width: 100%;
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  ul li {
+    padding: 3px 0 0 0;
+    margin: 0;
+  }
+  .buttons-wrapper {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .buttons-wrapper .linkItem {
+    margin: 2px 0;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .hideTextMobile {
+    display: none;
+  }
+
+  ul {
+    float: none;
+    padding: 0%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}

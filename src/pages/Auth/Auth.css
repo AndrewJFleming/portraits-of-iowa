@@ -1,0 +1,7 @@
+#auth-error-message {
+  position: absolute;
+  padding: 10px 10px 0 10px;
+  color: red;
+  left: 50%;
+  transform: translate(-50%, 0);
+}

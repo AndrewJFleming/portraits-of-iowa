@@ -1,0 +1,22 @@
+#first figure:last-child {
+  margin-left: 10px;
+}
+#first figcaption {
+  font-size: 14px;
+}
+
+#upload-form-col {
+  order: 2;
+}
+#figures-col {
+  order: 3;
+}
+
+@media screen and (max-width: 991px) {
+  #upload-form-col {
+    order: 3;
+  }
+  #figures-col {
+    order: 2;
+  }
+}

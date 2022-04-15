@@ -1,71 +1,120 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import './index.css';
-import firebase, { auth, provider } from './firebase.js';
+import React, { useState, useRef } from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 
-import CustomNavbar from './components/CustomNavbar/CustomNavbar';
-import FirstSection from './components/FirstSection/FirstSection';
-import SecondSection from './components/SecondSection/SecondSection';
-import ThirdSection from './components/ThirdSection/ThirdSection';
-import FourthSection from './components/FourthSection/FourthSection';
-import CustomFooter from './components/CustomFooter/CustomFooter';
+import Footer from "./component/Footer/Footer";
+import Home from "./pages/Home/Home";
+import TopNav from "./component/TopNav/TopNav";
+import Auth from "./pages/Auth/Auth";
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      user: null
-    };
-    this.login = this.login.bind(this);
-    this.logout = this.logout.bind(this);
-  }
+import { auth } from "./firebase/firebase";
+import {
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signOut,
+} from "firebase/auth";
 
-  componentDidMount() {
-    auth.onAuthStateChanged((user) => {
-      if (user) {
-        this.setState({ user });
-      } 
-    });
-}
+function App() {
+  const [user, setUser] = useState({});
+  const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const emailRef = useRef();
+  const passwordRef = useRef();
 
-  handleChange(e) {
-    /* ... */
-  }
+  const regExp = /\(([^)]+)\)/;
 
-  logout() {
-    auth.signOut()
-      .then(() => {
-        this.setState({
-          user: null
-        });
-      });
-  }
+  const errorHandling = (message) => {
+    console.log(message);
 
-  login() {
-    auth.signInWithPopup(provider) 
-      .then((result) => {
-        const user = result.user;
-        this.setState({
-          user
-        });
-      });
-  }
+    //Trim down Firebase error
+    const trimmedError = regExp.exec(message);
+    setError(trimmedError[1]);
+    setTimeout(() => setError(""), 3000);
+  };
 
-  render() {
-    return (
-      <Router>
-        <div className="App">
-          <CustomNavbar  user={this.state.user} login={this.login}  logout={this.logout}/>
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  });
 
-          <FirstSection user={this.state.user} login={this.login} />
-          <SecondSection />
-          <ThirdSection />
-          <FourthSection />
-          <CustomFooter />
-        </div>
-      </Router>
-    );
-  }
+  const handleSubmit = async (e, formType) => {
+    e.preventDefault();
+    if (formType === "reg") {
+      setIsLoading(true);
+      try {
+        const user = await createUserWithEmailAndPassword(
+          auth,
+          emailRef.current.value,
+          passwordRef.current.value
+        );
+        console.log(user);
+      } catch (error) {
+        errorHandling(error.message);
+      }
+      setIsLoading(false);
+    } else {
+      setIsLoading(true);
+      try {
+        const user = await signInWithEmailAndPassword(
+          auth,
+          emailRef.current.value,
+          passwordRef.current.value
+        );
+        console.log(user);
+      } catch (error) {
+        errorHandling(error.message);
+      }
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <Router>
+      <TopNav auth={auth} signOut={signOut} currentUser={user} />
+      <Switch>
+        <Route exact path="/">
+          <Home user={user} />
+        </Route>
+        <Route path="/register">
+          {user ? (
+            <Redirect to="/" />
+          ) : (
+            <Auth
+              error={error}
+              isLoading={isLoading}
+              title="Register"
+              desc="Register below to upload images for the Portraits of Iowa project."
+              buttonName="Register"
+              emailRef={emailRef}
+              passwordRef={passwordRef}
+              handleSubmit={(event) => handleSubmit(event, "reg")}
+            />
+          )}
+        </Route>
+        <Route path="/login">
+          {user ? (
+            <Redirect to="/" />
+          ) : (
+            <Auth
+              error={error}
+              isLoading={isLoading}
+              title="Login"
+              desc="Login with your registered user credentials to upload images for the Portraits of Iowa project."
+              buttonName="Login"
+              emailRef={emailRef}
+              passwordRef={passwordRef}
+              handleSubmit={(event) => handleSubmit(event, "login")}
+            />
+          )}
+        </Route>
+      </Switch>
+      <Footer />
+    </Router>
+  );
 }
 
 export default App;

@@ -1,0 +1,54 @@
+.uploadForm-wrapper {
+  padding: 0;
+  background-color: rgb(154, 209, 166);
+}
+
+.passed-deadline-background {
+  background-color: rgb(189, 223, 197);
+}
+
+.active-user-wrapper {
+  border-bottom: 1px solid #000000;
+  background-color: rgb(44, 73, 50);
+  color: #fff;
+  padding: 10px 20px;
+}
+
+#uploadForm {
+  padding-bottom: 10px;
+}
+
+#uploadForm div {
+  padding: 10px 20px;
+}
+#uploadForm div label {
+  margin-bottom: 0px;
+}
+
+#uploadForm input[type="file"] {
+  padding: 2px 0;
+}
+
+.uploadResult {
+  max-width: 25px;
+}
+
+.upload-result {
+  max-width: 100px;
+}
+#file-upload-button::after {
+  display: none;
+}
+
+@media screen and (max-width: 413px) {
+  #uploadForm div {
+    display: block;
+    justify-content: space-evenly;
+    padding: 2px;
+    text-align: center;
+  }
+
+  #uploadForm div:last-child {
+    flex-wrap: wrap;
+  }
+}

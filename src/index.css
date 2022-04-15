@@ -1,35 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
-
-body {
+body,
+html {
   margin: 0;
-  font-family: 'Marcellus', serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Open Sans", sans-serif;
   height: 100%;
+  background-color: rgb(245, 245, 245);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Marcellus", serif;
+}
+
+.sans-serif {
+  font-family: "Open Sans", sans-serif;
   font-weight: 600;
 }
+.serif-text {
+  font-family: "Marcellus", serif;
+}
 
-.page {
-  min-height: 100vh;
+.magenta-arrow {
+  max-width: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 a {
-  color: #0000ee;
+  text-decoration: none;
+  font-family: "Marcellus", serif;
+}
+a:hover {
+  text-decoration: underline;
 }
 
-figcaption {
-  padding: 10px 0px 20px 0px;
+.section {
+  min-height: 100vh;
+  padding-top: 4rem;
 }
 
-#pSizeUp {
-  font-size: 1.2em;
+.section:nth-child(odd) {
+  background-color: #ddd;
 }
 
-/* .flex {
+.section h2 {
+  font-size: 2em;
+}
+
+img {
+  max-width: 100%;
+}
+
+figcaption,
+.graphic-caption {
+  padding-top: 10px;
+}
+
+/* Applies to elements in Section1 and Section2 */
+.italicBold {
+  font-style: italic;
+  font-weight: 900;
+}
+
+.auth-page-wrapper {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  min-height: 100vh;
   align-items: center;
-  flex-wrap: nowrap;
-} */
+}
+.auth-form-wrapper {
+  max-width: 300px;
+}
+.auth-form {
+  background-color: rgb(154, 209, 166);
+  padding: 15px;
+}
+.auth-form input {
+  width: 100%;
+  margin-bottom: 7px;
+}
+
+.auth-button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.auth-form button {
+  margin-top: 7px;
+}
+
+#uploadForm input[type="file"]::file-selector-button,
+#uploadForm button,
+.auth-form button {
+  background-color: #ddd;
+  border: 1px solid #000;
+  box-shadow: 2px 2px 0px rgb(146, 146, 146);
+}
+
+@media screen and (max-width: 1199px) {
+  .section {
+    padding-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .section {
+    padding-top: 6rem;
+  }
+  .section:first-of-type {
+    padding-top: 7rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .gallery-flex-inner {
+    padding: 0 10px;
+  }
+  .gallery-flex-inner img:first-child {
+    padding-right: 4px !important;
+  }
+  .gallery-flex-inner img:last-child {
+    padding-left: 4px !important;
+  }
+
+  .hideImage {
+    display: none;
+  }
+}

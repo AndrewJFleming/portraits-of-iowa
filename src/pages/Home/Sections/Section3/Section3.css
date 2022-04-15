@@ -1,0 +1,22 @@
+#third .gallery img {
+  max-height: 130px;
+  padding: 5px 0px;
+}
+
+@media screen and (max-width: 991px) {
+  #third .gallery img {
+    max-height: 110px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #third .gallery img {
+    max-height: 95px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #third .gallery img {
+    max-height: 80px;
+  }
+}
