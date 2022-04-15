@@ -7,7 +7,7 @@ const AuthMessage = ({ isPassedDeadline, deadline }) => {
   return isPassedDeadline ? (
     <div className="auth-message-wrapper">
       <p className="passed-deadline-message">
-        * The submission period closed on{" "}
+        &#10033; The submission period closed on{" "}
         <span style={{ fontWeight: 700 }}>{deadline.toDateString()}</span>.
       </p>
     </div>

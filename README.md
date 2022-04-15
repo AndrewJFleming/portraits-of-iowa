@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/AndrewJFleming/portraits-of-iowa">
+  <a href="https://portraits-of-iowa.netlify.app/">
     <img src="src/assets/images/poi-logo.png" alt="Logo">
   </a>
 
@@ -13,6 +13,8 @@
     Website where residents of Cedar Rapids, Iowa could submit photos for the Portraits of Iowa public art installation.
     <br />
     <br />
+        <a href="https://portraits-of-iowa.netlify.app/">Portraits of Iowa demo (Netlify)</a>
+    ·
     <a href="https://www.linkedin.com/in/andrew-j-fleming-web-dev">My LinkedIn</a>
 </div>
 
@@ -35,6 +37,8 @@
 ## About The Project
 
 Public artist John Fleming commissioned a website for Portraits of Iowa, the winning project in a Cedar Rapids, Iowa, art installation competition. My client’s installation involved gathering hundreds of photo submissions from Cedar Rapids residents that would then be assembled into a hanging gallery/sculpture.
+
+_A demo version of <a href="https://portraits-of-iowa.netlify.app/">Portraits of Iowa</a> is hosted on Netlify._
 
 ### Built With
 
