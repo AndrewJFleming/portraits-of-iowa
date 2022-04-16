@@ -1,0 +1,9 @@
+#completed-project-page-wrapper h2 {
+    margin-bottom: 1rem;
+}
+#completed-project-page-wrapper .images-row {
+    margin-bottom: 2rem;
+}
+.completed-project-image-wrapper img {
+    width: 100%;
+}
