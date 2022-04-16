@@ -367,17 +367,26 @@ export const completedProjectData = {
         "Out of large the pool of community photo submissions, artist John Fleming selected 615 to be printed on acrylic panels and included in the installation. These prints were hung in a 'light fall' where sunlight shines through the dichroic prisms bringing the colors of the printed images to life.",
       images: [
         {
-          id: "2qV5hY",
-          title: "Completed Portraits of Iowa 1/4",
-          src: "https://live.staticflickr.com/65535/52008690271_b8f1560ce5_o.png",
+          id: "gSz85w",
+          title: "Completed Portraits of Iowa 1/6",
+          src: "https://live.staticflickr.com/65535/52009336994_2cf3fd5abe_o.jpg",
           caption:
             "Fullview of the completed installation illuminated by daylight.",
+          hideImage: true,
+        },
+        {
+          id: "2qV5hY",
+          title: "Completed Portraits of Iowa 2/6",
+          src: "https://live.staticflickr.com/65535/52008690271_5fd8962540_o.jpg",
+          caption: "Midde-range view of the daylight illumination.",
+          hideImage: false,
         },
         {
           id: "4XgsDA",
-          title: "Completed Portraits of Iowa 2/4",
-          src: "https://live.staticflickr.com/65535/52008741708_2babaf615b_o.png",
+          title: "Completed Portraits of Iowa 3/6",
+          src: "https://live.staticflickr.com/65535/52008741708_7ffed0d8d6_o.jpg",
           caption: "Closeup of the daylight illumination.",
+          hideImage: false,
         },
       ],
     },
@@ -388,18 +397,27 @@ export const completedProjectData = {
         "After daylight hours, an LED lighting system illuminates the sculpture and is programmed to slowly fade between vivid colors.",
       images: [
         {
+          id: "ymzuMJ",
+          title: "Completed Portraits of Iowa 4/6",
+          src: "https://live.staticflickr.com/65535/52009337009_a897e8c8cf_o.jpg",
+          caption: "Exterior view of Portraits of Iowa at night.",
+          hideImage: false,
+        },
+        {
           id: "VUEvcG",
-          title: "Completed Portraits of Iowa 3/4",
-          src: "https://live.staticflickr.com/65535/52007663182_c37bdeb746_o.png",
+          title: "Completed Portraits of Iowa 5/6",
+          src: "https://live.staticflickr.com/65535/52007663182_f0c4151ce3_o.jpg",
           caption:
             "Closeup of the completed installation illuminated by LED lighting system.",
+          hideImage: true,
         },
         {
           id: "o2YGzS",
-          title: "Completed Portraits of Iowa 4/4",
-          src: "https://live.staticflickr.com/65535/52007663152_2974a2ac06_o.png",
+          title: "Completed Portraits of Iowa 6/6",
+          src: "https://live.staticflickr.com/65535/52007663152_a35a1f7b4e_o.jpg",
           caption:
             "The LED system is capable of producing a wide range of vivid colors.",
+          hideImage: false,
         },
       ],
     },
