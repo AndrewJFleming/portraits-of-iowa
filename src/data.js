@@ -357,3 +357,51 @@ export const sections = [
     ],
   },
 ];
+
+export const completedProjectData = {
+  rows: [
+    {
+      id: "VO3TNB",
+      title: "Daylight Experience",
+      paragraph:
+        "Out of large the pool of community photo submissions, artist John Fleming selected 615 to be printed on acrylic panels and included in the installation. These prints were hung in a 'light fall' where sunlight shines through the dichroic prisms bringing the colors of the printed images to life.",
+      images: [
+        {
+          id: "2qV5hY",
+          title: "Completed Portraits of Iowa 1/4",
+          src: "https://live.staticflickr.com/65535/52008690271_b8f1560ce5_o.png",
+          caption:
+            "Fullview of the completed installation illuminated by daylight.",
+        },
+        {
+          id: "4XgsDA",
+          title: "Completed Portraits of Iowa 2/4",
+          src: "https://live.staticflickr.com/65535/52008741708_2babaf615b_o.png",
+          caption: "Closeup of the daylight illumination.",
+        },
+      ],
+    },
+    {
+      id: "wUzUFv",
+      title: "Night Experience",
+      paragraph:
+        "After daylight hours, an LED lighting system illuminates the sculpture and is programmed to slowly fade between vivid colors.",
+      images: [
+        {
+          id: "VUEvcG",
+          title: "Completed Portraits of Iowa 3/4",
+          src: "https://live.staticflickr.com/65535/52007663182_c37bdeb746_o.png",
+          caption:
+            "Closeup of the completed installation illuminated by LED lighting system.",
+        },
+        {
+          id: "o2YGzS",
+          title: "Completed Portraits of Iowa 4/4",
+          src: "https://live.staticflickr.com/65535/52007663152_2974a2ac06_o.png",
+          caption:
+            "The LED system is capable of producing a wide range of vivid colors.",
+        },
+      ],
+    },
+  ],
+};
