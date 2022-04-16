@@ -34,6 +34,11 @@ const TopNav = ({ auth, signOut, currentUser }) => {
                   more info<span className="hideText"> & questions</span>
                 </HashLink>
               </li>
+              <li className="linkItem">
+                <Link to="/completed-project">
+                  <span className="completed-project">completed project</span>
+                </Link>
+              </li>
             </ul>
           </div>
 

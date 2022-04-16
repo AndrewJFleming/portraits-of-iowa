@@ -18,6 +18,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
+import CompletedProject from "./pages/CompletedProject/CompletedProject";
 
 function App() {
   const [user, setUser] = useState({});
@@ -78,6 +79,9 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home user={user} />
+        </Route>
+        <Route path="/completed-project">
+          <CompletedProject />
         </Route>
         <Route path="/register">
           {user ? (
