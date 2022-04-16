@@ -14,29 +14,33 @@ const TopNav = ({ auth, signOut, currentUser }) => {
     <header>
       <Container>
         <div className="header-content">
-          <div className="header-content-left">
+          <div
+            className={`header-content-left ${
+              !currentUser && "unauthenticated"
+            }`}
+          >
             <HashLink id="branding" to="/#first">
               Portraits of Iowa
             </HashLink>
             <ul className="links-list">
               <li className="linkItem">
                 <HashLink to="/#second">
-                  <span className="hideTextMobile">about </span>the sculpture
+                  <span className="hideText">about </span>the sculpture
                 </HashLink>
               </li>
               <li className="linkItem">
                 <HashLink to="/#third">
-                  <span className="hideTextMobile">about </span>the photos
+                  <span className="hideText">about </span>the photos
                 </HashLink>
               </li>
               <li className="linkItem">
                 <HashLink to="/#fourth">
-                  more info<span className="hideText"> & questions</span>
+                  more info<span className="hideTextAlt"> & questions</span>
                 </HashLink>
               </li>
               <li className="linkItem">
-                <Link to="/completed-project">
-                  <span className="completed-project">completed project</span>
+                <Link className="completed-project" to="/completed-project">
+                  completed project
                 </Link>
               </li>
             </ul>

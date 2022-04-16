@@ -35,7 +35,7 @@ header {
 }
 
 header a {
-  color: white;
+  color: #fff;
   text-decoration: none;
 }
 .links-list .linkItem {
@@ -48,7 +48,7 @@ header a {
 }
 header a:active,
 header a:hover {
-  color: rgb(134, 177, 255);
+  color: #86b1ff;
 }
 
 #branding {
@@ -59,7 +59,7 @@ header a:hover {
 }
 
 #branding a:active {
-  color: rgb(134, 177, 255);
+  color: #86b1ff;
 }
 
 .links-wrapper {
@@ -93,28 +93,35 @@ header a:hover {
 }
 
 .completed-project {
-  color: black;
-  text-shadow: -1px -1px 0 rgb(154, 209, 166), 1px -1px 0 rgb(154, 209, 166), -1px 1px 0 rgb(154, 209, 166), 1px 1px 0 rgb(154, 209, 166);
+  color: #fff;
+  text-shadow: -1px -1px 0 rgba(255, 0, 255, 0.5), 1px -1px 0 rgba(255, 0, 255, 0.5), -1px 1px 0 rgba(255, 0, 255, 0.5), 1px 1px 0 rgba(255, 0, 255, 0.5);
+}
+.completed-project:hover {
+  color: #86b1ff;
+  text-shadow: none;
+}
+
+/*
+Apply hideText class only when passed currentUser prop is falsey
+*/
+.unauthenticated .hideText {
+  display: none;
 }
 
 @media screen and (max-width: 1199px) {
-  ul .hideText {
+  header ul .hideTextAlt {
     display: none;
   }
 }
 
 @media screen and (max-width: 991px) {
+  header ul li {
+    font-size: 0.8em;
+  }
   header ul {
     height: 100%;
   }
 
-  header ul .hideText {
-    display: none;
-  }
-
-  header ul li {
-    font-size: 0.8em;
-  }
   .buttons-wrapper button {
     font-size: 12px;
   }
@@ -126,7 +133,6 @@ header a:hover {
     display: flex;
     flex-wrap: nowrap;
   }
-
   #branding {
     width: 100%;
     padding-bottom: 0;
@@ -145,21 +151,14 @@ header a:hover {
   .buttons-wrapper .linkItem {
     margin: 2px 0;
   }
+  header ul {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 @media screen and (max-width: 575px) {
-  .hideTextMobile {
+  .hideText {
     display: none;
-  }
-
-  header ul {
-    float: none;
-    padding: 0%;
-    margin: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
   }
 }
