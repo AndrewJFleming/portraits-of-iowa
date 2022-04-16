@@ -10,3 +10,14 @@
 .completed-project-image-wrapper img {
     width: 100%;
 }
+.completed-project-image-caption {
+margin-top: 1rem;
+}
+
+
+
+@media screen and (max-width: 991px) {
+    .hide-complete-project-image {
+        display: none;
+    }
+  }

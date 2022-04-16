@@ -34,13 +34,22 @@ const CompletedProject = () => {
             </Row>
             <Row className="images-row">
               {row.images.map((completedProjectImage) => (
-                <Col md="6" lg="6" className="row-paragraph-col">
+                <Col
+                  md="6"
+                  lg="4"
+                  className={`${
+                    completedProjectImage.hideImage &&
+                    "hide-complete-project-image"
+                  }`}
+                >
                   <div className="completed-project-image-wrapper">
                     <img
                       src={completedProjectImage.src}
                       alt={completedProjectImage.caption}
                     />
-                    <p>{completedProjectImage.caption}</p>
+                    <p className="completed-project-image-caption">
+                      {completedProjectImage.caption}
+                    </p>
                   </div>
                 </Col>
               ))}
