@@ -45,4 +45,18 @@
   #fourth .gallery img {
     max-height: 105px;
   }
+
+  .gallery-flex-inner {
+    padding: 0 10px;
+  }
+  .gallery-flex-inner img:first-child {
+    padding-right: 4px !important;
+  }
+  .gallery-flex-inner img:last-child {
+    padding-left: 4px !important;
+  }
+  
+  #fourth .hideImage {
+    display: none;
+  }
 }

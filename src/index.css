@@ -125,18 +125,4 @@ figcaption,
   .section {
     padding-top: 7rem;
   }
-
-  .gallery-flex-inner {
-    padding: 0 10px;
-  }
-  .gallery-flex-inner img:first-child {
-    padding-right: 4px !important;
-  }
-  .gallery-flex-inner img:last-child {
-    padding-left: 4px !important;
-  }
-
-  .hideImage {
-    display: none;
-  }
 }
