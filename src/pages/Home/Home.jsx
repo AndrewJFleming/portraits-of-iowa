@@ -29,17 +29,17 @@ const Home = ({ user, deadline, isPassedDeadline }) => {
     });
   }, []);
 
-  //Render page at 0,0 scroll position after page redirects (login/register)
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location]);
-
   const handleScrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   };
+
+  //Render page at 0,0 scroll position after page redirects (login/register)
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   return (
     <React.Fragment>
