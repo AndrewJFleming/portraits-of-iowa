@@ -26,6 +26,10 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
   const emailRef = useRef();
   const passwordRef = useRef();
+  const [deadline, setDeadline] = useState(new Date("2020-07-11"));
+  const [isPassedDeadline, setIsPassedDeadline] = useState(
+    new Date() > deadline
+  );
 
   const regExp = /\(([^)]+)\)/;
 
@@ -78,10 +82,14 @@ function App() {
       <TopNav auth={auth} signOut={signOut} currentUser={user} />
       <Switch>
         <Route exact path="/">
-          <Home user={user} />
+          <Home
+            user={user}
+            deadline={deadline}
+            isPassedDeadline={isPassedDeadline}
+          />
         </Route>
         <Route path="/completed-project">
-          <CompletedProject />
+          {!isPassedDeadline ? <Redirect to="/" /> : <CompletedProject />}
         </Route>
         <Route path="/register">
           {user ? (

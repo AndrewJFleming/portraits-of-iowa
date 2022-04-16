@@ -4,12 +4,7 @@ import UploadForm from "./UploadForm/UploadForm";
 import { Container, Row, Col } from "react-bootstrap";
 import "./Section1.css";
 
-const Section1 = ({ section1, user }) => {
-  const [deadline, setDeadline] = useState(new Date("2020-07-11"));
-  const [isPassedDeadline, setIsPassedDeadline] = useState(
-    new Date() > deadline
-  );
-
+const Section1 = ({ section1, user, deadline, isPassedDeadline }) => {
   return (
     <div id="first" className="section">
       <Container>

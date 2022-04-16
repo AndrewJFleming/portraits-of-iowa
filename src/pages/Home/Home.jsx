@@ -10,7 +10,7 @@ import { sections } from "../../data.js";
 import "./Home.css";
 import ScrollToTopButton from "../../component/ScrollToTopButton/ScrollToTopButton";
 
-const Home = ({ user }) => {
+const Home = ({ user, deadline, isPassedDeadline }) => {
   const [pageSections, setPageSections] = useState([]);
   const [showScrollToTop, setShowScrollToTop] = useState(false);
   const location = useLocation();
@@ -43,7 +43,12 @@ const Home = ({ user }) => {
 
   return (
     <React.Fragment>
-      <Section1 section1={pageSections[0]} user={user} />
+      <Section1
+        section1={pageSections[0]}
+        user={user}
+        deadline={deadline}
+        isPassedDeadline={isPassedDeadline}
+      />
       <Section2 section2={pageSections[1]} />
       <Section3 section3={pageSections[2]} />
       <Section4 section4={pageSections[3]} />

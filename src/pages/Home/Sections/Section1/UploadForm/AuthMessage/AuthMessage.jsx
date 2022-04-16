@@ -10,6 +10,10 @@ const AuthMessage = ({ isPassedDeadline, deadline }) => {
         &#10033; The submission period closed on{" "}
         <span style={{ fontWeight: 700 }}>{deadline.toDateString()}</span>.
       </p>
+      <p>
+        Click <Link to="/completed-project">here</Link> to explore brief
+        documentation of the completed project.
+      </p>
     </div>
   ) : (
     <div className="auth-message-wrapper">
