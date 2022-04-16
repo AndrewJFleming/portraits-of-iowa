@@ -22,7 +22,7 @@ const UploadForm = ({ user, isPassedDeadline, deadline }) => {
     e.preventDefault();
     const promises = [];
     images.map((image) => {
-      const storageRef = ref(storage, `files/${image.name}`);
+      const storageRef = ref(storage, `files/${user.email}_${image.name}`);
       const uploadTask = uploadBytesResumable(storageRef, image);
       promises.push(uploadTask);
       uploadTask.on(
