@@ -19,9 +19,11 @@ const TopNav = ({ auth, signOut, currentUser }) => {
               !currentUser && "unauthenticated"
             }`}
           >
-            <HashLink id="branding" to="/#first">
-              Portraits of Iowa
-            </HashLink>
+            <div className="branding-wrapper">
+              <HashLink id="branding" to="/#first">
+                Portraits of Iowa
+              </HashLink>
+            </div>
             <ul className="links-list">
               <li className="linkItem">
                 <HashLink to="/#second">
