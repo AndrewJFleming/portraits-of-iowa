@@ -92,6 +92,11 @@ header a:hover {
   background-color: rgb(177, 204, 255);
 }
 
+.completed-project {
+  color: black;
+  text-shadow: -1px -1px 0 rgb(154, 209, 166), 1px -1px 0 rgb(154, 209, 166), -1px 1px 0 rgb(154, 209, 166), 1px 1px 0 rgb(154, 209, 166);
+}
+
 @media screen and (max-width: 1199px) {
   ul .hideText {
     display: none;
@@ -99,15 +104,15 @@ header a:hover {
 }
 
 @media screen and (max-width: 991px) {
-  ul {
+  header ul {
     height: 100%;
   }
 
-  ul .hideText {
+  header ul .hideText {
     display: none;
   }
 
-  ul li {
+  header ul li {
     font-size: 0.8em;
   }
   .buttons-wrapper button {
@@ -129,7 +134,7 @@ header a:hover {
 }
 
 @media screen and (max-width: 767px) {
-  ul li {
+  header ul li {
     padding: 3px 0 0 0;
     margin: 0;
   }
@@ -147,7 +152,7 @@ header a:hover {
     display: none;
   }
 
-  ul {
+  header ul {
     float: none;
     padding: 0%;
     margin: 0;
