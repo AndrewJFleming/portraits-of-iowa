@@ -21,14 +21,14 @@ import {
 import CompletedProject from "./pages/CompletedProject/CompletedProject";
 
 function App() {
-  const [user, setUser] = useState({});
-  const [error, setError] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
   const emailRef = useRef();
   const passwordRef = useRef();
+  const [user, setUser] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
   const [deadline, setDeadline] = useState(new Date("2020-07-11"));
   const [isPassedDeadline, setIsPassedDeadline] = useState(
-    new Date() > deadline
+    new Date() < deadline
   );
 
   const regExp = /\(([^)]+)\)/;
