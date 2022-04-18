@@ -47,7 +47,7 @@
 
 [![Project Screen Shot][project-screenshot]](https://portraits-of-iowa.netlify.app/)
 
-Public artist John Fleming commissioned a website for Portraits of Iowa, the winning project in a Cedar Rapids, Iowa, art installation competition. My client’s installation involved gathering hundreds of photo submissions from Cedar Rapids residents that would then be assembled into a hanging gallery/sculpture.
+Public artist John Fleming commissioned a website for Portraits of Iowa, the art installation competition where community participents could learn about the project and submit photos that would then be printed onto acrylic panels and assembled into a hanging gallery/sculpture.
 
 _A demo version of <a href="https://portraits-of-iowa.netlify.app/">Portraits of Iowa</a> is hosted on Netlify._
 
